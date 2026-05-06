@@ -6,8 +6,5 @@ function updateSize() {
         "Width: " + width + "px | Height: " + height + "px";
 }
 
-// Run on load
 updateSize();
-
-// Update when resizing
 window.addEventListener("resize", updateSize);
