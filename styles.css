@@ -1,4 +1,4 @@
-/* ===== PAGE LAYOUT ===== */
+/* ===== PAGE LAYOUT (STICKY FOOTER) ===== */
 html, body {
     height: 100%;
     margin: 0;
@@ -70,15 +70,6 @@ button:hover {
     flex: 1;
 }
 
-/* ===== WINDOW SIZE TRACKER ===== */
-.window-size {
-    background: #ffffff;
-    padding: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: bold;
-}
-
 /* ===== WIDGETS ===== */
 .widgets {
     display: flex;
@@ -127,6 +118,7 @@ footer {
     background: #2f6f8f;
     color: white;
     padding: 15px;
+    position: relative; /* required for corner positioning */
 }
 
 .footer-container {
@@ -143,6 +135,15 @@ footer {
 
 .footer-links a:hover {
     color: #e75480;
+}
+
+/* ✅ SCREEN SIZE DISPLAY */
+.size-display {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
 /* ===== MOBILE ===== */
