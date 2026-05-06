@@ -118,7 +118,7 @@ footer {
     background: #2f6f8f;
     color: white;
     padding: 15px;
-    position: relative; /* required for corner positioning */
+    position: relative; /* REQUIRED for positioning */
 }
 
 .footer-container {
@@ -137,13 +137,26 @@ footer {
     color: #e75480;
 }
 
-/* ✅ SCREEN SIZE DISPLAY */
+/* ===== SCREEN SIZE DISPLAY ===== */
 .size-display {
     position: absolute;
     bottom: 5px;
     right: 10px;
     font-size: 12px;
-    opacity: 0.8;
+    opacity: 0.85;
+}
+
+/* ===== UNIT SELECTOR ===== */
+.size-controls {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 12px;
+}
+
+.size-controls select {
+    font-size: 12px;
+    padding: 2px;
 }
 
 /* ===== MOBILE ===== */
