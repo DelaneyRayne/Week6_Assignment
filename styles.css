@@ -1,0 +1,171 @@
+/* ===== PAGE LAYOUT ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f0f6fa;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #2f6f8f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #e75480;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.hero img {
+    width: 350px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.green-btn {
+    background: #3fa34d;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* ===== WINDOW SIZE TRACKER ===== */
+.window-size {
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ===== WIDGETS ===== */
+.widgets {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    min-height: 180px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ===== QUOTE ===== */
+.quote {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background: #ffffff;
+    padding: 15px;
+    width: 250px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.sidebar img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #2f6f8f;
+    color: white;
+    padding: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #e75480;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .widgets {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
