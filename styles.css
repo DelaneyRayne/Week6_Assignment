@@ -1,5 +1,6 @@
-/* ===== PAGE LAYOUT (STICKY FOOTER) ===== */
-html, body {
+/* ===== PAGE LAYOUT ===== */
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -34,11 +35,15 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     padding: 40px;
-    background: #ffffff;
+    background: white;
 }
 
+/* Hero image */
 .hero img {
     width: 350px;
+
+    /* Smooth parallax effect */
+    transition: transform 0.1s linear;
 }
 
 /* ===== BUTTONS ===== */
@@ -49,7 +54,9 @@ button {
     padding: 10px;
     margin: 5px;
     cursor: pointer;
-    transition: transform 0.2s, opacity 0.2s;
+
+    transition: transform 0.2s,
+                opacity 0.2s;
 }
 
 button:hover {
@@ -61,12 +68,13 @@ button:hover {
     background: #3fa34d;
 }
 
-/* ===== MAIN LAYOUT ===== */
+/* ===== DASHBOARD ===== */
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 250px;
     gap: 20px;
     padding: 20px;
+
     flex: 1;
 }
 
@@ -77,11 +85,12 @@ button:hover {
 }
 
 .card {
-    background: #ffffff;
+    background: white;
     padding: 20px;
     flex: 1;
     text-align: center;
     min-height: 180px;
+
     transition: transform 0.2s;
 }
 
@@ -91,17 +100,18 @@ button:hover {
 
 /* ===== QUOTE ===== */
 .quote {
-    background: #ffffff;
+    background: white;
     padding: 15px;
     margin-top: 15px;
 }
 
 /* ===== SIDEBAR ===== */
 .sidebar {
-    background: #ffffff;
+    background: white;
     padding: 15px;
     width: 250px;
     height: 300px;
+
     box-sizing: border-box;
     border-radius: 8px;
 }
@@ -118,7 +128,8 @@ footer {
     background: #2f6f8f;
     color: white;
     padding: 15px;
-    position: relative; /* REQUIRED for positioning */
+
+    position: relative;
 }
 
 .footer-container {
@@ -137,11 +148,12 @@ footer {
     color: #e75480;
 }
 
-/* ===== SCREEN SIZE DISPLAY ===== */
+/* ===== WINDOW SIZE DISPLAY ===== */
 .size-display {
     position: absolute;
     bottom: 5px;
     right: 10px;
+
     font-size: 12px;
     opacity: 0.85;
 }
@@ -151,6 +163,7 @@ footer {
     position: absolute;
     bottom: 5px;
     left: 10px;
+
     font-size: 12px;
 }
 
@@ -161,6 +174,7 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
+
     .hero {
         flex-direction: column;
         text-align: center;
