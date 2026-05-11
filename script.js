@@ -56,16 +56,16 @@ function updateSize() {
         " | Height: " + displayHeight + unit;
 }
 
-// Run on load
+// Run on page load
 updateSize();
 
-// Update on resize
+// Update when resizing
 window.addEventListener(
     "resize",
     updateSize
 );
 
-// Update when unit changes
+// Update when changing units
 document
     .getElementById("unitSelect")
     .addEventListener(
@@ -80,14 +80,15 @@ document
 
 /*
 Selected Element:
-Hero image
+Advertisement sidebar widget
 */
-const heroImage =
-    document.querySelector(".hero img");
+const advertBox =
+    document.querySelector(".sidebar");
 
 /*
 Scroll Event:
-Moves image slightly while scrolling
+Moves advertisement slightly
+while scrolling
 */
 window.addEventListener("scroll", function () {
 
@@ -96,11 +97,11 @@ window.addEventListener("scroll", function () {
         window.scrollY;
 
     /*
-    Move image slower than page
+    Move sidebar slower than page
     for parallax effect
     */
-    heroImage.style.transform =
+    advertBox.style.transform =
         "translateY(" +
-        scrollPosition * 0.2 +
+        scrollPosition * 0.1 +
         "px)";
 });
