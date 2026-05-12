@@ -102,6 +102,6 @@ window.addEventListener("scroll", function () {
     */
     advertBox.style.transform =
         "translateY(" +
-        scrollPosition * 0.3 +
+        scrollPosition * 0.4 +
         "px)";
 });
