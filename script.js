@@ -5,14 +5,14 @@
 // Function to update window size
 function updateSize() {
 
-    // Browser width and height
+    // Get browser width and height
     let width =
         document.documentElement.clientWidth;
 
     let height =
         document.documentElement.clientHeight;
 
-    // Selected unit
+    // Get selected unit
     let unit =
         document.getElementById("unitSelect").value;
 
@@ -36,7 +36,7 @@ function updateSize() {
             (height / baseFont).toFixed(2);
     }
 
-    // Convert to %
+    // Convert to percentage
     if (unit === "%") {
 
         displayWidth =
@@ -50,13 +50,13 @@ function updateSize() {
             ).toFixed(1);
     }
 
-    // Display size
+    // Display updated size
     document.getElementById("sizeDisplay").textContent =
         "Width: " + displayWidth + unit +
         " | Height: " + displayHeight + unit;
 }
 
-// Run on page load
+// Run once on page load
 updateSize();
 
 // Update when resizing
@@ -86,22 +86,22 @@ const advertBox =
     document.querySelector(".sidebar");
 
 /*
-Scroll Event:
-Moves advertisement slightly
-while scrolling
+Event Used:
+Window scroll event
+
 */
 window.addEventListener("scroll", function () {
 
-    // Scroll amount
+    // Get scroll amount
     let scrollPosition =
         window.scrollY;
 
     /*
-    Move sidebar slower than page
-    for parallax effect
+    Increase movement amount
+    for a stronger effect
     */
     advertBox.style.transform =
         "translateY(" +
-        scrollPosition * 0.1 +
+        scrollPosition * 0.3 +
         "px)";
 });
